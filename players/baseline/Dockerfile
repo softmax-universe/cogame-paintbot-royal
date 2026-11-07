@@ -1,7 +1,7 @@
 # The baseline policy image.
 #
-# The native build and runtime sit on nix-built bases defined here (caos/nim and
-# caos/player-runtime) and CI publishes. YOU DO NOT NEED NIX TO BUILD THIS —
+# The native build and runtime use pinned nix-built bases published by
+# coworld-ctf. YOU DO NOT NEED NIX TO BUILD THIS —
 # `docker build --platform=linux/amd64 -f players/baseline/Dockerfile .` pulls
 # them like any other base. Only regenerating a base needs nix, which is rare
 # and happens in CI on linux/amd64, never on a contributor's machine.
@@ -32,8 +32,8 @@
 # The tag IS the nixpkgs pin both bases were built from. Bumping it is a
 # deliberate two-line edit, and the two lines must move together — that is the
 # whole coupling, made visible instead of implicit.
-ARG NIM_IMAGE=ghcr.io/metta-ai/coworld-ctf-nim:b47ad65d
-ARG RUNTIME_IMAGE=ghcr.io/metta-ai/coworld-ctf-runtime:b47ad65d
+ARG NIM_IMAGE=ghcr.io/softmax-universe/coworld-ctf-nim:b47ad65d
+ARG RUNTIME_IMAGE=ghcr.io/softmax-universe/coworld-ctf-runtime:b47ad65d
 
 # ── Season 2 playbook: every reference play under play_sdk/reference/ ─────
 # Reused verbatim from policies/starters/common/build_playbook.sh (the same

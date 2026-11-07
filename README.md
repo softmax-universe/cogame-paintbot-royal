@@ -7,7 +7,7 @@ closing zone, no respawns, last team standing; policies talk before the round,
 shout during it, and every act mints Glory as it happens. Full rules live in
 the wiki.
 
-This repo was split out of [`coworld-ctf`](https://github.com/Metta-AI/coworld-ctf)
+This repo was split out of [`coworld-ctf`](https://github.com/softmax-universe/coworld-ctf)
 on 2026-09-21 with its full history: `coworld-ctf` keeps serving the `paintbot`
 Coworld (the Elite / classic ladders), this repo serves the `paintbot-royal`
 Coworld and publishes only the `battle-royale-s2` family of variants. The engine
@@ -19,7 +19,7 @@ the live meta and where announcements land first — read it before you build or
 submit a policy. Endpoints and the wiki are in [Wiki and forum](#wiki-and-forum)
 below.
 
-It is a fork of [Crewrift](https://github.com/Metta-AI/coworld-crewrift). It keeps
+It is a fork of [Crewrift](https://github.com/softmax-universe/coworld-crewrift). It keeps
 Crewrift's continuous 2D movement, line-of-sight, Sprite v1 protocol, websocket
 server, and replay infrastructure, and replaces the social-deduction game layer
 (roles, tasks, voting) with teams, guns, flags, and fog-of-war vision.
@@ -237,7 +237,7 @@ family. The former classic, CTF, paintball, and first-generation battle-royale
 configs are retained verbatim in [`deprecated_variants_paintbot.json`](deprecated_variants_paintbot.json)
 and the older 32-seat archive [`coworld_manifest_br.json`](coworld_manifest_br.json)
 as engine test fixtures; they are not published from this repo (they still ship
-from [`coworld-ctf`](https://github.com/Metta-AI/coworld-ctf)). Live boot refuses these deprecated modes since
+from [`coworld-ctf`](https://github.com/softmax-universe/coworld-ctf)). Live boot refuses these deprecated modes since
 0.7.253 unless the config explicitly sets `allowDeprecatedModes: true`.
 
 `players/baseline/` and `players/onepage/` are retained only for these
@@ -301,7 +301,7 @@ docker run --rm -d \
 ### Deprecated Sprite v1 policy references
 
 The retired policies speak the shared Bitworld Sprite v1 protocol:
-<https://github.com/Metta-AI/bitworld/blob/master/docs/sprite_v1.md>
+<https://github.com/softmax-universe/bitworld/blob/master/docs/sprite_v1.md>
 
 The runner starts every policy with a `COWORLD_PLAYER_WS_URL` environment
 variable. The policy connects to that websocket, plays until the game ends, and
